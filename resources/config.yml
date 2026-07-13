@@ -1,0 +1,59 @@
+# Stable Player Display item display view range (matches the SPD recommendation of 0.6)
+view-range: 0.6
+# Detect slim (Alex) skins from the player's profile texture metadata
+auto-slim: true
+# Variant used when auto-slim is off or detection fails: "default" or "slim"
+default-variant: default
+
+# Automatically start a follow-mirror for every VR player (toggle per player with /vpdtoggle)
+auto-mirror: true
+# Hide the mirror displays from players that have the Vivecraft mod (they see the real model)
+hide-from-modded: true
+# Send a fake invisibility effect for the VR player to viewers WITHOUT the mod
+fake-invisibility: true
+
+# Show the items held by the VR player on the mirror hands
+show-held-items: true
+# Extra offset for held items in hand-local pixels (calibration, /vpdadjust itemoffset)
+item-offset-x: 0.0
+item-offset-y: 0.0
+item-offset-z: 0.0
+# Display interpolation/teleport duration in ticks (higher = smoother but more delayed)
+interpolation-ticks: 2
+# Show a floating name tag above the mirror (the real one is hidden by the fake invisibility)
+name-tag: true
+# Leg rendering for players without trackers: "arms" mimics what SPLIT_ARMS observers see
+# (vanilla 12px legs with the hip walk swing), "legs" mimics SPLIT_ARMS_LEGS (feet anchored)
+leg-style: arms
+# Reproduce the vanilla walk swing on the feet (like Vivecraft's playerWalkAnim)
+walk-animation: true
+# Without foot trackers, rotate the lower legs toward the estimated knee
+# (Vivecraft itself keeps them vertical; set false for 1:1 Vivecraft behavior)
+legs-aim-at-knee: true
+
+# Limb math: true = Vivecraft's DEFAULT "Connected" mode (both segments aim at the
+# estimated joint, shoulders lift, slight arm length variation), false = "Split" mode
+limbs-connected: true
+# Connected mode: clamp hands/feet to the arm length (Vivecraft "Limit Limbs", default off)
+limbs-limit: false
+
+# Split mode only - forearm orientation source: "quat" = full controller rotation,
+# "aim" = point from the estimated elbow to the hand
+lower-arm-mode: quat
+# Extra part-local rotation applied to the forearms, in degrees (calibration, /vpdadjust)
+lower-twist-yaw: 0.0
+lower-twist-pitch: 0.0
+lower-twist-roll: 0.0
+# Hand-local rotation applied to held items, in degrees (calibration, /vpdadjust itemtwist)
+item-twist-yaw: 0.0
+item-twist-pitch: 0.0
+item-twist-roll: 0.0
+
+# Flash the mirror red when the player takes damage. The flash is rendered by the SPD core
+# shader (the color lives in entity.fsh). Test in game with /vpdadjust hurttest
+hurt-tint: true
+# Blob shadow under the mirror (the invisible real player casts none)
+shadow: true
+
+# Players with the automatic mirror disabled (managed by /vpdtoggle)
+disabled-players: []

@@ -1,0 +1,28 @@
+name: VPDMirror
+main: dev.vpd.mirror.VpdMirrorPlugin
+version: 1.1.0
+api-version: '1.21'
+depend: [Vivecraft-Spigot-Extension]
+author: vpd
+description: Mirrors Vivecraft VR poses with Stable Player Display item displays.
+commands:
+  vpdvr:
+    description: Toggle an anchored VR pose mirror for a player
+    usage: /vpdvr [player]
+    permission: vpdmirror.admin
+  vpdtest:
+    description: Toggle a static test rig
+    usage: /vpdtest
+    permission: vpdmirror.admin
+  vpdtoggle:
+    description: Toggle the automatic follow mirror for a VR player
+    usage: /vpdtoggle <player>
+    permission: vpdmirror.admin
+  vpdadjust:
+    description: Calibrate forearm/item rotation offsets
+    usage: /vpdadjust [lowermode|lowertwist|itemtwist] ...
+    permission: vpdmirror.admin
+permissions:
+  vpdmirror.admin:
+    description: Allows using the VPDMirror commands
+    default: op
