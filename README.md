@@ -1,6 +1,16 @@
 # VPDMirror
 
-Paper/Purpur plugin that mirrors Vivecraft VR player poses with display entities for non-modded viewers.
+VPDMirror is a Paper/Purpur plugin designed to be used with
+[Stable Player Display](https://github.com/bradleyq/stable_player_display) and
+[Vivecraft Spigot Extension](https://github.com/Vivecraft/Vivecraft-Spigot-Extension).
+
+It renders VR players' movements using `item_display` entities, allowing players
+without the Vivecraft mod installed to see VR players' poses and movements.
+
+## Requirements
+
+- [Stable Player Display](https://github.com/bradleyq/stable_player_display)
+- [Vivecraft Spigot Extension](https://github.com/Vivecraft/Vivecraft-Spigot-Extension)
 
 ## Structure
 
@@ -17,4 +27,3 @@ Run the local build script from the project root:
 ```
 
 The built jar is written under `build/`.
-
